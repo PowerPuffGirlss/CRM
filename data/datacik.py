@@ -1,0 +1,1 @@
+print("deniz hi!")
