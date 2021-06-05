@@ -87,22 +87,23 @@ def tablo_bilgi_sayi(database,tablo_isimi):
     result=mycursor.fetchone()
     print(f"bilgi sayi: {result[0]}")
 tablo_bilgi_sayi("school","class")
-class tablo_islemleri:
-    def __init__(self,database,tablo_isimi):
-        sql=mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="Ana2almaal#",
-        database=database)
-        self.mycursor=sql.cursor()
-        self.tablo=tablo_isimi
-    @property
-    def count(self):
-        mycursor=self.mycursor
-        deger=f"SELECT COUNT(*) FROM {self.tablo}"
-        result=mycursor.execute(deger)
-        result=mycursor.fetchone()
-        print(f"bilgi sayi: {result[0]}")
+# class tablo_islemleri:
+#     def __init__(self,database,tablo_isimi):
+#         sql=mysql.connector.connect(
+#         host="localhost",
+#         user="root",
+#         password="Ana2almaal#",
+#         database=database)
+#         self.mycursor=sql.cursor()
+#         self.tablo=tablo_isimi
+#     @property
+#     def count(self):
+#         mycursor=self.mycursor
+#         deger=f"SELECT COUNT(*) FROM {self.tablo}"
+#         result=mycursor.execute(deger)
+#         result=mycursor.fetchone()
+#         print(f"bilgi sayi: {result[0]}")
 
-tablo_islemleri.count()
+# tablo_islemleri.count()
+database_ac("goksin")
 
