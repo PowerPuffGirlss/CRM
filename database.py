@@ -1,3 +1,4 @@
+from sys import setprofile
 import mysql.connector,datetime
 from csv import reader
 
@@ -147,8 +148,18 @@ def tablo_bagla(database,ana_tablo,baglanan_tablo,neye_baglanacak_ana,neye_bagla
 
 
 
-def bilgi_cek():
-     pass
+def bilgi_cek(database ,tablo ,ne_soru , spesifif_cekmek_isdedigin_bilgi="*"):
+    sql=mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password="Ana2almaal#",
+        database=database
+    )
+    mycursor=sql.cursor()
+    result=mycursor.execute(f"SELECT {spesifif_cekmek_isdedigin_bilgi} FROM {tablo} WHERE {ne_soru} ")
+    result=mycursor.fetchall()
+    print(result)
+    return result
 
 # tablo_bagla("school","student","class","classId","id")
 
