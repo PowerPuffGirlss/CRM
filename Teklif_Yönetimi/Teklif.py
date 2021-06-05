@@ -5,9 +5,7 @@ mydb=mysql.connector.connect(
 
     user="root", 
 
-    password="08Ozge34", 
-
-    auth_plugin ="mysql_native_password"
+    password="08Ozge34"
 )
 mydb.close()
 print(mydb)
