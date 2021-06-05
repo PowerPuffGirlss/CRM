@@ -7,5 +7,8 @@ mydb=mysql.connector.connect(
 
     password="08Ozge34"
 )
-mydb.close()
 print(mydb)
+
+mycursor=mydb.cursor()
+
+mycursor.execute("Create Table customers (name Varchar(255),adress varchar(255))")
