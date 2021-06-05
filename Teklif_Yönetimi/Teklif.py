@@ -15,4 +15,4 @@ mycursor=mydb.cursor()
 
 mycursor.execute("CREATE DATABASE Teklif ")
 
-mycursor.execute("Create Table customers (name Varchar(255),adress varchar(255))")
+mycursor.execute("Create Table Yönetim (name Varchar(255),adress varchar(255))")
