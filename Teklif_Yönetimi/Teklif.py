@@ -7,5 +7,5 @@ mydb=mysql.connector.connect(
 
     password="08Ozge34" 
 )
-
+mydb.close()
 print(mydb)
