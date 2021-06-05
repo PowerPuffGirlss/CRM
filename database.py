@@ -79,7 +79,7 @@ def bilgi_toplama(database,tablo,csvdosyaismi):
                 d=list(p)
             if g>0:
                 # print(",".join(d))
-                tablo_bilgi_ekle(database,tablo,",".join(d),tuple(p))
+                tablo_bilgi_ekle(database,tablo,", ".join(d),tuple(p))
             g+=1
 
 
@@ -142,6 +142,13 @@ def tablo_bagla(database,ana_tablo,baglanan_tablo,neye_baglanacak_ana,neye_bagla
             print(a)
     except mysql.connector.Error as err:
         print("hata "+err)
+
+
+
+
+
+def bilgi_cek():
+     pass
 
 # tablo_bagla("school","student","class","classId","id")
 
