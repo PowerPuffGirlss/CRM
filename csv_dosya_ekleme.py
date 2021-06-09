@@ -1,0 +1,11 @@
+import deger
+deger.bilgi_toplama("crm","Ajanda_Randevu","csv.dosyaları\Ajanda_randevu.csv")
+deger.bilgi_toplama("crm","Aktivite_Yönetimi","csv.dosyaları\Aktivite_Yönetim.csv")
+deger.bilgi_toplama("crm","Görev_Raporları","csv.dosyaları\Görev_Rapor.csv")
+deger.bilgi_toplama("crm","Hatırlatıcı_Mesajlar","csv.dosyaları\Hatırlatıcı_mesaj.csv")
+deger.bilgi_toplama("crm","Hedef_Raporları","csv.dosyaları\Hedef_Rapor.csv")
+deger.bilgi_toplama("crm","Müşteri_Yönetimi","csv.dosyaları\Müşteri_yönetimi.csv")
+deger.bilgi_toplama("crm","Satış_Raporları","csv.dosyaları\Satıs_Rapor.csv")
+deger.bilgi_toplama("crm","Tahsilat_Raporları","csv.dosyaları\Tahsilat_Rapor.csv")
+deger.bilgi_toplama("crm","Teklif_Raporları","csv.dosyaları\Teklif_Rapor.csv")
+deger.bilgi_toplama("crm","Teklif_Yönetimi","csv.dosyaları\Teklif_Yönetim.csv")

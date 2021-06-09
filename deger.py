@@ -1,13 +1,14 @@
 from sys import setprofile
 import mysql.connector,datetime
 from csv import reader
+from sifre import pasword
 
 from mysql.connector import cursor
 def database_ac(isim):
     sql=mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Ana2almaal#"
+        password=pasword
     )
     mycursor=sql.cursor()  
     mycursor.execute(f"CREATE DATABASE {isim}")
@@ -23,11 +24,11 @@ def database_ac(isim):
 
 
 
-def database_tablo_olusdur(database,isim,params=str):
+def database_tablo_olustur(database,isim,params=str):
     sql=mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Ana2almaal#",
+        password=pasword,
         database=database
     )
     mycursor=sql.cursor()  
@@ -46,7 +47,7 @@ def tablo_bilgi_ekle(database,tablo_isimi,eklemek_istedigin,liste):
     sql=mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Ana2almaal#",
+        password=pasword,
         database=database
     )
     a="%s "
@@ -57,7 +58,7 @@ def tablo_bilgi_ekle(database,tablo_isimi,eklemek_istedigin,liste):
     sql.commit()
     print(mycursor.rowcount)
 def bilgi_toplama(database,tablo,csvdosyaismi):
-    with open(csvdosyaismi,"r") as file:
+    with open(csvdosyaismi,"r",encoding="utf-8") as file:
         f=reader(file)
         g=0
         for p in f:
@@ -72,11 +73,11 @@ def bilgi_toplama(database,tablo,csvdosyaismi):
 
 
 
-def tablo_bilgileri_gosder(database,tablo_isimi):
+def tablo_bilgileri_goster(database,tablo_isimi):
     sql=mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Ana2almaal#",
+        password=pasword,
         database=database
     )
     mycursor=sql.cursor()
@@ -98,7 +99,7 @@ def tablo_bilgi_sayi(database,tablo_isimi):
     sql=mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Ana2almaal#",
+        password=pasword,
         database=database
     )
     mycursor=sql.cursor()
@@ -116,7 +117,7 @@ def tablo_bagla(database,ana_tablo,baglanan_tablo,neye_baglanacak_ana,neye_bagla
     sql=mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Ana2almaal#",
+        password=pasword,
         database=database
     )
     mycursor=sql.cursor()
@@ -134,7 +135,7 @@ def tablo_bilgi_cikar(database,tablo_isimi,silmek_istedigin,bilgiler):
     sql=mysql.connector.connect(
         host="localhost",
         user="root",
-        password="mysql123",
+        password=pasword,
         database=database
     )
     mycursor = sql.cursor()
@@ -148,17 +149,11 @@ def tablo_bilgi_cikar(database,tablo_isimi,silmek_istedigin,bilgiler):
     print(mycursor.rowcount, " kayıt silindi")
 
 
-def gelir_modeli():
-    a=0
-    x=int(input("siparişinizin fiyatı:"))
-    gelir=x*0.15+120
-    print(gelir)
-
 def bilgi_cek(database ,tablo ,ne_soru , spesifif_cekmek_isdedigin_bilgi="*"):
     sql=mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Ana2almaal#",
+        password=pasword,
         database=database
     )
     mycursor=sql.cursor()
@@ -170,14 +165,7 @@ def bilgi_cek(database ,tablo ,ne_soru , spesifif_cekmek_isdedigin_bilgi="*"):
 
 
 
-# database_ac("yemek_sepeti")
-# database_tablo_olusdur("yemek_sepeti",
-# "Menu",
-# "id INT AUTO_INCREMENT PRIMARY KEY,yemek_turu VARCHAR(25) , ek_olarak_ne VARCHAR(255),fiyat INT")
-# database_tablo_olusdur("yemek_sepeti","KULANICI","id INT AUTO_INCREMENT PRIMARY KEY,ISIM_SOY VARCHAR(25) , ADRESS VARCHAR(255),BAKIYE INT")
-# database_tablo_olusdur("yemek_sepeti","SEPET","id INT AUTO_INCREMENT PRIMARY KEY, KULANICI_id INT,yemek_LISDESI VARCHAR(25) , URUN_SAYI VARCHAR(255),DURUM INT,CALISAN_KURYEid INT")
-# database_tablo_olusdur("yemek_sepeti","CALISAN_KURYE","id INT AUTO_INCREMENT PRIMARY KEY,isim_soy VARCHAR(25)")
-# database_tablo_olusdur("yemek_sepeti","mutfak","id INT AUTO_INCREMENT PRIMARY KEY,SEPETid VARCHAR(25),durum VARCHAR(25)")
+
 
 
 
