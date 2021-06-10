@@ -1,1 +1,1 @@
-pasword="Ana2almaal#"
+pasword="08Ozge34"
