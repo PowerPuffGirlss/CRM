@@ -18,11 +18,12 @@ def Crm_Sistemi():
         Satim İşlemleri için             :5
         Ürün Yönetimi için               :6
         Hatırlatıcı Mesajlar için        :7
-        Raporlar için                    :8
-        Çıkış için                       :9
+        Şirketler için                   :8
+        Raporlar için                    :9
+        Çıkış için                       :10
             """)
 
-        islem=int(input("Yapmak istediğiniz işlemin değerini giriniz:"))
+        islem=int(input("Yapmak istediğiniz işlemin değerini giriniz:   "))
 
         if islem==1:
             d=0
@@ -32,7 +33,8 @@ def Crm_Sistemi():
                             Randevu sil           :2
                             Randevu bilgileri     :3
                             Randevu sayısı        :4
-                            Ana ekrana dön        :5
+                            Bilgi cek             :5
+                            Ana ekrana dön        :6
                             """)
                 ajan=int(input(" Yapmak istediğiniz işlemin değerini giriniz:"))
                 if ajan==1:
@@ -52,6 +54,21 @@ def Crm_Sistemi():
                     print("  ↓↓↓↓↓Randevu sayisi↓↓↓↓↓")
                     deger.tablo_bilgi_sayi("crm","Ajanda_Randevu")
                 if ajan==5:
+                    d=input("""
+                    Aratmak istediğiniz seçeneğin adını giriniz.
+                    ***Başlık
+                    ***İlgili Kontaklar
+                    ***İlgili Kullanıcılar
+                    ***Başlangıç Saati ve Tarihi
+                    ***Önem Derecesi
+                    ***Durumu2
+                    ***Sonuç
+                    """)
+                    g=input("Aramatmak istediğiniz bilgiyi giriniz:")
+                    deger.bilgi_cek("crm","Ajanda_Randevu",g,d)
+                        
+
+                if ajan==6:
                     print("Gercekten ana ekrana donmek istiyor musun? (Y/N) ")
                     say=input()
                     if say=="Y":
@@ -66,11 +83,12 @@ def Crm_Sistemi():
             d=0
             while(d==0):
                 print(""" -----Teklif ve Yönetim Sistemi-----
-                Teklif ve Yönetim Sistemi ekle       :1
-                Teklif ve Yönetim Sistemi sil:2
+                Teklif ve Yönetim Sistemi ekle     :1
+                Teklif ve Yönetim Sistemi sil      :2
                 Teklif ve Yönetim Sistemi bilgileri:3
-                Teklif ve Yönetim Sistemi sayısı:4
-                Ana ekrana dön:5
+                Teklif ve Yönetim Sistemi sayısı   :4
+                Bilgi cek                          :5
+                Ana ekrana dön                     :6
                 """)
                 ajan=int(input(" Yapmak istediğiniz işlemin değerini giriniz:"))
                 
@@ -89,6 +107,18 @@ def Crm_Sistemi():
                     print("  ↓↓↓↓↓Teklif sayisi↓↓↓↓↓")
                     deger.tablo_bilgi_sayi("crm","Teklif_Yönetim")
                 if ajan==5:
+                    d=input("""
+                    Aratmak istediğiniz seçeneğin adını giriniz.
+                    ***Teklif Adi
+                    ***Teklif Tarihi
+                    ***Kontak
+                    ***Fiyat
+                    ***Karlilik Bilgileri
+                    ***İslem
+                    """)
+                    g=input("Aramatmak istediğiniz bilgiyi giriniz:")
+                    deger.bilgi_cek("crm","Teklif_Yönetimi",g,d)
+                if ajan==6:
                     print("Gercekten ana ekrana donmek istiyor musun? (Y/N) ")
                     say=input()
                     if say=="Y":
@@ -101,11 +131,12 @@ def Crm_Sistemi():
             d=0
             while(d==0):
                 print(""" -----Müşteri ve Yönetim Sistemi-----
-                Müşteri ve Yönetimi ekle:1
-                Müşteri ve Yönetimi sil:2
-                Müşteri ve Yönetimi için bilgileri:3
-                Müşteri ve Yönetimi sayısı:4
-                Ana ekrana dön:5
+                Müşteri ve Yönetimi ekle           :1
+                Müşteri ve Yönetimi sil            :2
+                Müşteri ve Yönetimi için bilgileri :3
+                Müşteri ve Yönetimi sayısı         :4
+                Bilgi çek                          :5
+                Ana ekrana dön                     :6
                 """)
                 ajan=int(input(" Yapmak istediğiniz işlemin değerini giriniz:"))
                 
@@ -124,6 +155,17 @@ def Crm_Sistemi():
                     print("  ↓↓↓↓↓Müşteri sayisi↓↓↓↓↓")
                     deger.tablo_bilgi_sayi("crm","Müşteri_yönetimi")
                 if ajan==5:
+                    d=input("""
+                    Aratmak istediğiniz seçeneğin adını giriniz.
+                    ***ADI SOYADI
+                    ***Marka Adı
+                    ***Marka Ekonomisi
+                    ***Cinsiyet
+                    ***Telefon numarası
+                    """)
+                    g=input("Aramatmak istediğiniz bilgiyi giriniz:")
+                    deger.bilgi_cek("crm","Müşteri_Yönetimi",g,d)                    
+                if ajan==6:
                     print("Gercekten ana ekrana donmek istiyor musun? (Y/N) ")
                     say=input()
                     if say=="Y":
@@ -141,7 +183,8 @@ def Crm_Sistemi():
                 Aktivite sil           :2
                 Aktivite bilgileri     :3
                 Aktivite sayısı        :4
-                Ana ekrana dön        :5
+                Bilgi çek              :5
+                Ana ekrana dön         :6
                 """)
                 ajan=int(input(" Yapmak istediğiniz işlemin değerini giriniz:"))
                 
@@ -160,6 +203,16 @@ def Crm_Sistemi():
                     print("  ↓↓↓↓↓Aktivite sayisi↓↓↓↓↓")
                     deger.tablo_bilgi_sayi("crm","Aktivite_Yönetimi")
                 if ajan==5:
+                    d=input("""
+                    Aratmak istediğiniz seçeneğin adını giriniz.
+                    ***Aktivite Adi
+                    ***Aktivite Yeri
+                    ***Aktivite Zamani 
+                    ***Katilimci Sayisi
+                    """)
+                    g=input("Aramatmak istediğiniz bilgiyi giriniz:")
+                    deger.bilgi_cek("crm","Aktivite_Yönetimi",g,d)             
+                if ajan==6:
                     print("Gercekten ana ekrana donmek istiyor musun? (Y/N) ")
                     say=input()
                     if say=="Y":
@@ -174,7 +227,8 @@ def Crm_Sistemi():
                 Satım sil           :2
                 Satım bilgileri     :3
                 Satım sayısı        :4
-                Ana ekrana dön      :5
+                Bilgi çek           :5
+                Ana ekrana dön      :6
             
                 """)
                 ajan=int(input(" Yapmak istediğiniz işlemin değerini giriniz:"))
@@ -194,6 +248,26 @@ def Crm_Sistemi():
                     print("  ↓↓↓↓↓Satım sayisi↓↓↓↓↓")
                     deger.tablo_bilgi_sayi("crm","satislar")
                 if ajan==5:
+                    d=input("""
+                    Aratmak istediğiniz seçeneğin adını giriniz.
+                    ***Satış Adı
+                    ***Satış Tarihi
+                    ***Satış Yapan
+                    ***Kontak
+                    ***Fiyat
+                    ***Ödeme Durumu
+                    ***Karlılık
+                    ***İşlem
+                    """)
+                    g=input("Aramatmak istediğiniz bilgiyi giriniz:")
+                    deger.bilgi_cek("crm","satislar",g,d)             
+                if ajan==6:
+                    print("Gercekten ana ekrana donmek istiyor musun? (Y/N) ")
+                    say=input()
+                    if say=="Y":
+                        print("Ana ekran......")
+                        d=1
+                if ajan==6:
                     print("Gercekten ana ekrana donmek istiyor musun? (Y/N) ")
                     say=input()
                     if say=="Y":
@@ -208,7 +282,8 @@ def Crm_Sistemi():
                 Ürün sil           :2
                 Ürün bilgileri     :3
                 Ürün sayısı        :4
-                Ana ekrana dön     :5
+                Bilgi çek          :5
+                Ana ekrana dön     :6
                 """)
                 
                 ajan=int(input(" Yapmak istediğiniz işlemin değerini giriniz:"))
@@ -228,6 +303,18 @@ def Crm_Sistemi():
                     print("  ↓↓↓↓↓Ürün sayisi↓↓↓↓↓")
                     deger.tablo_bilgi_sayi("crm","urunler")
                 if ajan==5:
+                    d=input("""
+                    Aratmak istediğiniz seçeneğin adını giriniz.
+                    ***Ürün Kodu
+                    ***Ürün Adı
+                    ***Marka Kategori
+                    ***Ürün Fiyat
+                    ***Stok Miktarı
+                    ***Durum
+                    """)
+                    g=input("Aramatmak istediğiniz bilgiyi giriniz:")
+                    deger.bilgi_cek("crm","urunler",g,d)                   
+                if ajan==6:
                     print("Gercekten ana ekrana donmek istiyor musun? (Y/N) ")
                     say=input()
                     if say=="Y":
@@ -242,7 +329,8 @@ def Crm_Sistemi():
                 Hatırlatıcı mesaj sil       :2
                 Hatırlatıcı mesaj bilgileri :3
                 Hatırlatıcı mesaj sayısı    :4
-                Ana ekrana dön              :5
+                Bilgi çek                   :5
+                Ana ekrana dön              :6
                 """)
                 ajan=int(input(" Yapmak istediğiniz işlemin değerini giriniz:"))
                 
@@ -261,16 +349,75 @@ def Crm_Sistemi():
                     print("  ↓↓↓↓↓Hatırlatıcı mesaj sayisi↓↓↓↓↓")
                     deger.tablo_bilgi_sayi("crm","Hatırlatıcı_Mesajlar")
                 if ajan==5:
+                    d=input("""
+                    Aratmak istediğiniz seçeneğin adını giriniz.
+                    ***Baslik
+                    ***İlgili Kontaklar 
+                    ***İlgili Kullanıcılar
+                    ***Başlangıç Saati ve Tarihi
+                    ***Hatırlatma Tarihi
+                    ***Önem Derecesi 
+                    ***Durumu
+                    ***Sonuç
+                    ***Hatırlatıcı mesajlar
+                    """)
+                    g=input("Aramatmak istediğiniz bilgiyi giriniz:")
+                    deger.bilgi_cek("crm","Hatırlatıcı_Mesajlar",g,d)                     
+                if ajan==6:
                     print("Gercekten ana ekrana donmek istiyor musun? (Y/N) ")
                     say=input()
                     if say=="Y":
                         print("Ana ekran......")
                         d=1
             
-            
+        if islem==8:
+            d=0
+            while(d==0):
+                print(""" -----Şirket Kontrol Sistemi-----
+                Şirket ekle      :1
+                Şirket sil       :2
+                Şirket bilgileri :3
+                Şirket sayısı    :4
+                Bilgi çek        :5
+                Ana ekrana dön   :6
+                """)
+                ajan=int(input(" Yapmak istediğiniz işlemin değerini giriniz:"))
+                
+                if ajan==1:
+                    bilgi_eklemek_icin=(input("Şirket Adı:"),input("Faaliyet Yılı:"),input("Danışman:"),input("Kontak:"),input("İlişki Durumu:"),input("Hakkında:"))
+                    try:
+                        deger.tablo_bilgi_ekle("crm","sirketler","sirket_adi,failiyet_yili,danisman,kontakt,iliskidurumu,hakkinda",bilgi_eklemek_icin)
+                    except :
+                        print("Eklemede bilinmeyen hata olustu.")
+                if ajan==2:
+                    deger.tablo_bilgi_cikar("crm","sirketler",input(" hangi katagoriye gore :   "),input("secdigin katagoriye gore bilgi :     "))
+                if ajan==3:
+                    print("☻--------Bilgiler---------☻")
+                    deger.tablo_bilgileri_goster("crm","sirketler")
+                if ajan==4:
+                    print("  ↓↓↓↓↓Şirket sayisi↓↓↓↓↓")
+                    deger.tablo_bilgi_sayi("crm","sirketler")
+                if ajan==5:
+                    d=input("""
+                    Aratmak istediğiniz seçeneğin adını giriniz.
+                    ***Sirket Adi
+                    ***Faaliyet Yili
+                    ***Danisman
+                    ***Kontak
+                    ***Ilişki Durumu
+                    ***Hakkinda
+                    """)
+                    g=input("Aramatmak istediğiniz bilgiyi giriniz:")
+                    deger.bilgi_cek("crm","sirketler",g,d)                     
+                if ajan==6:
+                    print("Gercekten ana ekrana donmek istiyor musun? (Y/N) ")
+                    say=input()
+                    if say=="Y":
+                        print("Ana ekran......")
+                        d=1
 
               
-        if islem==8:
+        if islem==9:
             f=0
             while(f==0):
                 print(""" -----Raporlar-----
@@ -286,11 +433,12 @@ def Crm_Sistemi():
                     d=0
                     while(d==0):
                         print(""" -----Teklif Raporu-----
-                            Teklif Raporu ekle:1
-                            Teklif Raporu sil:2
+                            Teklif Raporu ekle     :1
+                            Teklif Raporu sil      :2
                             Teklif Raporu bilgileri:3
-                            Teklif Raporu sayısı:4
-                            Ana ekrana dön:5
+                            Teklif Raporu sayısı   :4
+                            Bilgi çek              :5
+                            Ana ekrana dön         :6
                             """)
                         ajan=int(input(" Yapmak istediğiniz işlemin değerini giriniz:"))
                         if ajan==1:
@@ -307,8 +455,19 @@ def Crm_Sistemi():
                         if ajan==4:
                             print("  ↓↓↓↓↓Teklif Rapor Sayısı sayisi↓↓↓↓↓")
                             deger.tablo_bilgi_sayi("crm","Teklif_Yönetimi")
-               
                         if ajan==5:
+                            d=input("""
+                            Aratmak istediğiniz seçeneğin adını giriniz.
+                            ***Teklif Adi
+                            ***Baslangic Tarihi
+                            ***Kontak
+                            ***Teklif Yapan
+                            ***Durum
+                            ***Tutar
+                            """)
+                            g=input("Aramatmak istediğiniz bilgiyi giriniz:")
+                            deger.bilgi_cek("crm","Teklif_Raporları",g,d)         
+                        if ajan==6:
                             print("""____Devam etmek istediğin işlem____
                             1. Raporlar
                             2. Ana ekran
@@ -329,11 +488,12 @@ def Crm_Sistemi():
                     d=0
                     while(d==0):
                         print(""" -----Tahsilat Raporu-----
-                            Tahsilat Raporu ekle:1
-                            Tahsilat Raporu  sil:2
+                            Tahsilat Raporu ekle     :1
+                            Tahsilat Raporu  sil     :2
                             Tahsilat Raporu bilgileri:3
-                            Tahsilat Raporu sayısı:4
-                            Ana ekrana dön:5
+                            Tahsilat Raporu sayısı   :4
+                            Bilgi çek                :5
+                            Ana ekrana dön           :6
                             """)
                         ajan=int(input(" Yapmak istediğiniz işlemin değerini giriniz:"))
                         if ajan==1:
@@ -351,6 +511,19 @@ def Crm_Sistemi():
                             print("  ↓↓↓↓↓Teklif Rapor Sayısı ↓↓↓↓↓")
                             deger.tablo_bilgi_sayi("crm","Tahsilat_Raporları")
                         if ajan==5:
+                            d=input("""
+                            Aratmak istediğiniz seçeneğin adını giriniz.
+                            ***Satis Adi
+                            ***Kontak
+                            ***Tutar
+                            ***Zaman
+                            ***Odeme Durumu
+                            ***Odeme Tipi
+                            ***Tahsilat Durumu
+                            """)
+                            g=input("Aramatmak istediğiniz bilgiyi giriniz:")
+                            deger.bilgi_cek("crm","Tahsilat_Raporları",g,d)  
+                        if ajan==6:
                             print("""____Devam etmek istediğin işlem____
                             1. Raporlar
                             2. Ana ekran
@@ -371,11 +544,12 @@ def Crm_Sistemi():
                     d=0
                     while(d==0):
                         print(""" -----Satış Raporu-----
-                            Satış Raporu ekle:1
-                            Satış Raporu sil:2
+                            Satış Raporu ekle     :1
+                            Satış Raporu sil      :2
                             Satış Raporu bilgileri:3
-                            Satış Raporu sayısı:4
-                            Ana ekrana dön:5
+                            Satış Raporu sayısı   :4
+                            Bilgi çek             :5
+                            Ana ekrana dön        :6
                             """)
                         ajan=int(input(" Yapmak istediğiniz işlemin değerini giriniz:"))
                         if ajan==1:
@@ -393,6 +567,19 @@ def Crm_Sistemi():
                             print("  ↓↓↓↓↓Teklif Rapor Sayısı ↓↓↓↓↓")
                             deger.tablo_bilgi_sayi("crm","Satış_Raporları")
                         if ajan==5:
+                            d=input("""
+                            Aratmak istediğiniz seçeneğin adını giriniz.
+                            ***Satis Adi
+                            ***Satis Tarihi
+                            ***Kontak
+                            ***Satis Yapan
+                            ***Durum
+                            ***Tutar
+                            ***Kalan Tutar
+                            """)
+                            g=input("Aramatmak istediğiniz bilgiyi giriniz:")
+                            deger.bilgi_cek("crm","Satış_Raporları",g,d)    
+                        if ajan==6:
                             print("""____Devam etmek istediğin işlem____
                             1. Raporlar
                             2. Ana ekran
@@ -410,11 +597,12 @@ def Crm_Sistemi():
                     d=0
                     while(d==0):
                         print(""" -----Hedef Raporu-----
-                            Hedef Raporu ekle:1
-                            Hedef Raporu sil:2
+                            Hedef Raporu ekle     :1
+                            Hedef Raporu sil      :2
                             Hedef Raporu bilgileri:3
-                            Hedef Raporu sayısı:4
-                            Ana ekrana dön:5
+                            Hedef Raporu sayısı   :4
+                            Bilgi çek             :5
+                            Ana ekrana dön        :6
                             """)
                         ajan=int(input(" Yapmak istediğiniz işlemin değerini giriniz:"))
                         if ajan==1:
@@ -432,6 +620,19 @@ def Crm_Sistemi():
                             print("  ↓↓↓↓↓Teklif Rapor Sayısı ↓↓↓↓↓")
                             deger.tablo_bilgi_sayi("crm","Hedef_Raporları")
                         if ajan==5:
+                            d=input("""
+                            Aratmak istediğiniz seçeneğin adını giriniz.
+                            ***Kullanici
+                            ***Hedef_Tipi
+                            ***Hedef
+                            ***Gerceklesen
+                            ***Gerceklesme Yuzdesi
+                            ***Prim
+                            ***Prim Tutari
+                            """)
+                            g=input("Aramatmak istediğiniz bilgiyi giriniz:")
+                            deger.bilgi_cek("crm","Hedef_Raporları",g,d)  
+                        if ajan==6:
                             print("""____Devam etmek istediğin işlem____
                             1. Raporlar
                             2. Ana ekran
@@ -449,11 +650,12 @@ def Crm_Sistemi():
                     d=0
                     while(d==0):
                         print(""" -----Görev Raporu-----
-                            Görev Raporu ekle:1
-                            Görev Raporu sil:2
+                            Görev Raporu ekle     :1
+                            Görev Raporu sil      :2
                             Görev Raporu bilgileri:3
-                            Görev Raporu sayısı:4
-                            Ana ekrana dön:5
+                            Görev Raporu sayısı   :4
+                            Bilgi çek             :5
+                            Ana ekrana dön        :6
                             """)
                         ajan=int(input(" Yapmak istediğiniz işlemin değerini giriniz:"))
                         if ajan==1:
@@ -471,6 +673,20 @@ def Crm_Sistemi():
                             print("  ↓↓↓↓↓Teklif Rapor Sayısı ↓↓↓↓↓")
                             deger.tablo_bilgi_sayi("crm","Görev_Raporları")
                         if ajan==5:
+                            d=input("""
+                            Aratmak istediğiniz seçeneğin adını giriniz.
+                            ***Baslik
+                            ***ilgili Kontaklar
+                            ***ilgili Kullanicilar
+                            ***Baslangic Tarihi
+                            ***Tip
+                            ***Durum
+                            ***Onem Derecesi
+                            ***Hatirlatma
+                            """)
+                            g=input("Aramatmak istediğiniz bilgiyi giriniz:")
+                            deger.bilgi_cek("crm","Görev_Raporları",g,d)                            
+                        if ajan==6:
                             print("""____Devam etmek istediğin işlem____
                             1. Raporlar
                             2. Ana ekran
@@ -491,9 +707,8 @@ def Crm_Sistemi():
                         print("Ana ekran......")
                         f=1
                     
-                        
-            
-        if islem==9:
+
+        if islem==10:
             print("gerçekten çıkmak istiyor musunuz? (Y/N) ")
             say=input()
             if say=="Y":

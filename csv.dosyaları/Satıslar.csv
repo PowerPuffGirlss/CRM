@@ -1,0 +1,6 @@
+satis_adi,satis_tarihi,satis_yapan,kontakt,fiyat,odeme_durumu,karlilik,islem
+AAAAA,2021-06-10 19:27:00,Deniz Nazari,Ahmet,500,Pesin,100,Satim,
+BBBBB,2021-06-10 19:27:00,Goksin Usta,Mehmet,800,Pesin,100,Alim,
+CCCCC,2021-06-10 19:27:00,Ozge Cengizhan,Zubeyde,1100,Pesin,100,Alim,
+DDDDD,2021-06-10 19:27:00,Cagan Kilicci,Emre,1400,Taksit,100,Satim,
+EEEEE,2021-06-10 19:27:00,Selin Celik,Taha,1700,Taksit,100,Satim

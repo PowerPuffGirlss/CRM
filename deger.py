@@ -149,7 +149,7 @@ def tablo_bilgi_cikar(database,tablo_isimi,silmek_istedigin,bilgiler):
     print(mycursor.rowcount, " kayıt silindi")
 
 
-def bilgi_cek(database ,tablo ,ne_soru , spesifif_cekmek_isdedigin_bilgi="*"):
+def bilgi_cek(database ,tablo ,isdedigin_bilgi, cekmek_isdedigin_bilgi):
     sql=mysql.connector.connect(
         host="localhost",
         user="root",
@@ -157,9 +157,11 @@ def bilgi_cek(database ,tablo ,ne_soru , spesifif_cekmek_isdedigin_bilgi="*"):
         database=database
     )
     mycursor=sql.cursor()
-    result=mycursor.execute(f"SELECT {spesifif_cekmek_isdedigin_bilgi} FROM {tablo} WHERE {ne_soru} ")
+    result=mycursor.execute(f"SELECT * FROM {tablo} WHERE {cekmek_isdedigin_bilgi}='{isdedigin_bilgi}' ")
     result=mycursor.fetchall()
-    print(result)
+    for x in result:
+        d=" ".join(list(x))
+        
     return result
 
 

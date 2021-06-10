@@ -12,7 +12,7 @@ deger.database_tablo_olustur("crm",
 """id INT AUTO_INCREMENT PRIMARY KEY, satis_adi  VARCHAR(15)  NOT NULL ,satis_tarihi DATETIME NOT NULL , satis_yapan VARCHAR(55), kontakt VARCHAR(55), fiyat INT  NOT NULL , odeme_durumu  VARCHAR(300), karlilik VARCHAR(55), islem VARCHAR(300)""")
 
 deger.database_tablo_olustur("crm",
-"sirketler","""id INT AUTO_INCREMENT PRIMARY KEY, sirket_adi  VARCHAR(15) NOT NULL , failiyet_yili DATETIME NOT NULL  ,danisman VARCHAR(55),kontakt VARCHAR(55), iliskidurumu VARCHAR(55), hakinda VARCHAR(300)""")
+"sirketler","""id INT AUTO_INCREMENT PRIMARY KEY, sirket_adi  VARCHAR(15) NOT NULL , failiyet_yili DATETIME NOT NULL  ,danisman VARCHAR(55),kontakt VARCHAR(55), iliskidurumu VARCHAR(55), hakkinda VARCHAR(300)""")
 
 # deger.database_tablo_olustur("crm",
 # "sirketler","""id INT AUTO_INCREMENT PRIMARY KEY, marka_adi VARCHAR(85) ,durum  VARCHAR(300), Oluşturulma_Tarihi  DATETIME , islem  VARCHAR(300)""")

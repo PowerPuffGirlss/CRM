@@ -1,2 +1,2 @@
 
-pasword="sifre ni yaz"
+pasword="Ana2almaal#"
