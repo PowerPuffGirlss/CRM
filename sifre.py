@@ -1,1 +1,2 @@
-pasword="08Ozge34"
+
+pasword="sifre ni yaz"

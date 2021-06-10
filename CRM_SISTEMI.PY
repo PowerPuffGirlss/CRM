@@ -1,6 +1,6 @@
-from os import extsep
+
 import deger
-# import tablo_olusturma,csv_dosya_ekleme
+import tablo_olusturma,csv_dosya_ekleme
 
 def Crm_Sistemi():
     s=0
@@ -8,6 +8,7 @@ def Crm_Sistemi():
     while s==0 :
         if d==0:
             print("😁CRM sisteme hoş geldiniz😁")
+            print("-----------------------------")
 
         print("""
         Ajanda ve randevu işlemleri için :1
