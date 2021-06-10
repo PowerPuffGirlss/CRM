@@ -121,7 +121,7 @@ def tablo_bagla(database,ana_tablo,baglanan_tablo,neye_baglanacak_ana,neye_bagla
         database=database
     )
     mycursor=sql.cursor()
-    sq=f"SELECT *FROM {ana_tablo} as x inner join {baglanan_tablo} as y on x.{neye_baglanacak_ana}=y.{neye_baglanacak_baglanan} "
+    sq=f"SELECT *FROM {ana_tablo} INNER JOIN {baglanan_tablo} ON {ana_tablo}.{neye_baglanacak_ana}={baglanan_tablo}.{neye_baglanacak_baglanan} "
     mycursor.execute(sq)
     try: 
         result=mycursor.fetchall()

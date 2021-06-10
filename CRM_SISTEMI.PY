@@ -4,7 +4,10 @@ import deger
 
 def Crm_Sistemi():
     s=0
+    d=0
     while s==0 :
+        if d==0:
+            print("😁CRM sisteme hoş geldiniz😁")
 
         print("""
         Ajanda ve randevu işlemleri için :1
