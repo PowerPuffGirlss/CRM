@@ -160,12 +160,14 @@ def bilgi_cek(database ,tablo ,isdedigin_bilgi, cekmek_isdedigin_bilgi):
     result=mycursor.execute(f"SELECT * FROM {tablo} WHERE {cekmek_isdedigin_bilgi}='{isdedigin_bilgi}' ")
     result=mycursor.fetchall()
     for x in result:
-        d=" ".join(list(x))
+        h=""
+        for z in x:
+            h=h+str(z)+" "
+        print(h)
+
+
         
     return result
-
-
-
 
 
 

@@ -1,6 +1,6 @@
 
 import deger
-import tablo_olusturma,csv_dosya_ekleme
+# import tablo_olusturma,csv_dosya_ekleme
 
 def Crm_Sistemi():
     s=0
@@ -61,7 +61,7 @@ def Crm_Sistemi():
                     ***İlgili Kullanıcılar
                     ***Başlangıç Saati ve Tarihi
                     ***Önem Derecesi
-                    ***Durumu2
+                    ***Durumu
                     ***Sonuç
                     """)
                     g=input("Aramatmak istediğiniz bilgiyi giriniz:")
