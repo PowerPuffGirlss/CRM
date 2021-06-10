@@ -1,15 +1,15 @@
 # Hoşgeldin Profesör
 ![Source Pocket Readme Banner](https://github.com/PowerPuffGirlss/CRM/blob/main/cop/tumblr_p7oci41L5W1xncpnwo5_250.webp)
 # CRM
-[CRM SİSTEMİ](https://ozgecengizhan-mc.medium.com/), müşteri ilişkileri yönetiminin ilk harflerinin kısaltmasıdır...
+[CRM SİSTEMİ](https://ozgecengizhan-mc.medium.com/), müşteri ilişkileri yönetiminin ilk harflerinin kısaltmasıdır.
 
 # Technologies
 
-projemiz ne içeriyor:
+Projemiz ne içeriyor ?
 
-* csv dosyaları
-* mysql database
-* python
+* Csv Dosyaları
+* Mysql Database
+* Python
 
 
 # Code Owners
