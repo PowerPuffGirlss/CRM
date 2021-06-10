@@ -1,4 +1,4 @@
-# Hoş Geldin Profesör
+# Hoş Geldin Profesör 
 ![Source Pocket Readme Banner](https://github.com/PowerPuffGirlss/CRM/blob/main/cop/tumblr_p7oci41L5W1xncpnwo5_250.webp)
 # CRM
 [CRM SİSTEMİ](https://ozgecengizhan-mc.medium.com/), müşteri ilişkileri yönetiminin ilk harflerinin kısaltmasıdır.
